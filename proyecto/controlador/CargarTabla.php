@@ -6,6 +6,7 @@ class CargarTabla extends Conex{
         $this->conectar();
         $tabla = "";
         $res = $this->consultar();
+        $this->desconectar();
         if($res != 0){
           while($row = mysql_fetch_array($res)){
               $tabla .="<tr>";
